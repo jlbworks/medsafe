@@ -1,0 +1,336 @@
+
+.blog-container 
+  display flex
+  width 100% 
+  max-width 72rem 
+  margin 3rem auto
+  justify-content space-between
+  +below('s')
+    flex-wrap wrap 
+  .left-col
+    max-width 66%
+    width 100%
+    +below('s')
+      max-width 100%
+    .blog-holder
+      box-shadow 0 0 15px -6px rgba(0,0,0,0.1)
+      height: 30rem;
+      position relative
+      background-size: cover;
+      margin-bottom 1rem 
+      background-position: center;
+      filter: grayscale(50%);
+      -webkit-filter:grayscale(50%);
+      transition 1s 
+      +below('s')
+        height 40rem
+      .text-holder
+        opacity 0
+        background: rgba(255,255,255,1);
+        height: auto;
+        width: 66.66%;
+        transition .5s ease-in
+        position absolute 
+        bottom .5rem 
+        right .5rem 
+        +below('s')
+          opacity .8
+          width 90%
+          transform translateX(-50%)
+          left 50%
+          bottom .5rem
+        .date-holder 
+          position absolute 
+          right 0
+          top 0 
+          box-shadow 0 0 5px 1px rgba(0,0,0,.1)
+          width 2.5rem 
+          height 2.5rem 
+          display flex 
+          align-items center 
+          justify-content center 
+          flex-direction column 
+          background-color secondaryColor
+          h5 
+            margin 0
+            color white 
+          h6
+            margin 0
+            color white 
+        .text-holder-top
+          margin: 1rem 1rem 0 1rem;
+          h4 
+            font-size 19px
+            color secondaryColor
+            font-weight 800
+            text-transform uppercase
+            padding-right 10px
+            margin 0
+          h5
+            margin 0
+            font-weight 300
+            font-size 13px
+            text-transform lowercase 
+            a 
+              color secondaryColor
+        .text-holder-bottom
+          padding .5rem 1rem 1rem 1rem 
+          p 
+            font-size .9rem 
+            line-height 1.4
+            margin-bottom 0
+    .blog-holder:hover
+      filter: grayscale(0%);
+      -webkit-filter:grayscale(0%);  
+      .text-holder 
+        opacity 1
+  .right-col
+    width 100%
+    max-width 33%
+    list-style none
+    +below('s')
+      max-width 100%
+      margin-top 2rem 
+    .right-col-inner 
+      padding 0 1rem 1rem 1rem 
+      box-shadow 0 0 15px -6px rgba(0,0,0,0.1)
+      width 100%
+      margin 0 auto
+      .image-holder 
+        margin-top 1rem 
+        background-color secondaryColor
+        padding 1rem 
+        img 
+          display block 
+          margin 0 auto
+    #search-5
+      label
+        display none
+      form 
+        div 
+          display flex 
+          #s 
+            width 70%
+            border 0
+            padding 3px 2px
+            background-color rgba(0,0,0,.1)
+          #searchsubmit
+            width 30%
+            border none
+            background-color secondaryColor 
+            color white 
+            font-family primaryFont
+    h2 
+      font-size 19px
+      color secondaryColor
+      border-bottom 3px solid secondaryColor
+      display inline-block
+      font-weight 800
+      text-transform uppercase
+      padding-right 10px
+    ul 
+      list-style none 
+      padding 0 0 0 15px
+      li, li a 
+        color secondaryColor
+        transition .5s
+        font-size 16px 
+      li a:hover 
+        color secondaryColor 
+    #categories-4
+      label
+        display none 
+      select 
+        width 100%
+    .tagcloud
+      margin 0 0 1rem 
+      a 
+        margin 3px 
+        padding 3px 5px  
+        border-radius 0
+        font-size 13px 
+        color secondaryColor
+        background-color rgba(0,0,0,.1)
+        text-transform lowercase
+        transition 1s
+      a:hover 
+        background-color secondaryColor
+        color white
+    #calendar-2
+      box-shadow 0 0 15px -7px rgba(0,0,0,0.5)
+      table 
+        width 100%
+        text-align center 
+        caption 
+          font-size 16px 
+          text-transform uppercase 
+          color white 
+          width 100% 
+          background-color secondaryColor
+          text-align center 
+          font-weight 600
+          letter-spacing 2px 
+        thead
+          tr 
+            border-left 1px solid rgba(0,0,0,.05)
+            border-right 1px solid rgba(0,0,0,.05)
+            th 
+              text-align center 
+        td 
+          padding .2rem
+          border 1px solid rgba(0,0,0,.05)
+          a 
+            width 100%
+            height 100%
+            display flex 
+            align-items center 
+            justify-content center 
+            color primaryColor
+        tfoot
+          border 1px solid rgba(0,0,0,.05)
+          margin-top .5rem 
+          padding .5rem 
+          background-color secondaryColor
+          td 
+            border none 
+            color white 
+            font-weight 600
+            text-transform uppercase
+            letter-spacing 1px
+            a 
+              color white 
+                
+
+.blog-featured
+  display flex
+  width 100% 
+  height 32rem
+  max-width 72rem 
+  margin 3rem auto
+  +below('s')
+    flex-wrap wrap 
+    height auto
+  .text-holder
+    text-align center 
+    color white
+    display flex 
+    flex-direction column
+    width 100%
+    height 100%
+    justify-content center 
+    align-items center  
+    p 
+      margin 0 0 3rem 
+      padding .2rem .5rem 
+      display inline-block
+      background-color white
+      color primaryColor
+      font-size .8rem 
+      font-weight 800
+      text-transform uppercase 
+      letter-spacing .05rem 
+      position: relative;
+    h4
+      font-size 2rem
+      max-width 19rem
+      white-space pre-wrap 
+      padding .2rem .5rem 
+      font-weight 600
+  .featured-col-left
+    width 66.66%
+    height 100%
+    padding 1.5vw
+    background-size cover
+    background-position center
+    +below('s')
+      width 100%
+      height 32rem  
+  .featured-col-right
+    width 33.33%
+    display flex 
+    flex-direction column
+    background-size cover
+    +below('s')
+      width 100% 
+      flex-direction row 
+    .featured-stack
+      height 50%
+      padding 1.5vw 
+      background-size cover
+      background-position center
+      +below('s')
+        width 50%
+        height 16rem  
+      
+.page-nation
+  font-size 1rem 
+  color primaryColor 
+  margin-top 1rem 
+  a 
+    color primaryColor
+
+.draw-border
+  box-shadow: inset 0 0 0 4px white;
+  color: #58afd1;
+  -webkit-transition: color 0.25s 0.08333s;
+  transition: color 0.25s 0.08333s;
+  position: relative;
+  border-color primaryColor
+.draw-border::before, .draw-border::after 
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+.draw-border::before 
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+
+.draw-border::after 
+  border-top-width: 4px;
+  border-right-width: 4px;
+
+
+.featured-col-left, .featured-stack
+  filter: grayscale(50%);
+  -webkit-filter:grayscale(50%);
+  transition 1s 
+.featured-col-left:hover, .featured-stack:hover
+  filter: grayscale(0%);
+  -webkit-filter:grayscale(0%);  
+  .draw-border 
+    color white 
+    animation text-bounce 1s
+    p 
+      color white 
+      background-color: primaryColor;
+  .draw-border::before, .draw-border::after 
+    border-color: primaryColor;
+    -webkit-transition: border-color 0s, width 0.25s, height 0.25s;
+    transition: border-color 0s, width 0.25s, height 0.25s;
+    width: 100%;
+    height: 100%;
+
+  .draw-border::before 
+    -webkit-transition-delay: 0s, 0s, 0.25s;
+    transition-delay: 0s, 0s, 0.25s;
+  .draw-border::after 
+    -webkit-transition-delay: 0s, 0.25s, 0s;
+    transition-delay: 0s, 0.25s, 0s;
+  
+
+
+@keyframes text-bounce {
+  0%, 100% {
+    color white
+  }
+  
+  50% {
+    color primaryColor
+  }
+  
+}

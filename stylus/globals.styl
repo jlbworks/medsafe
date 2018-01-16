@@ -1,0 +1,74 @@
+/* / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / /
+/ / Fonts/Icon Sets
+/ / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / */
+@import url("//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,300,400,600,700')
+
+img
+  max-width 100%
+  height auto
+
+html
+  font-size 18px
+  line-height 1.428
+  +below('xxl')
+    font-size 16px
+  +below('xl')
+    font-size 14px
+  +above('hd')
+    font-size 20px
+  +below('m')
+    font-size 12px
+  a
+    line-height 1.2
+    letter-spacing 1.4
+  a:visted, a:focus, a:hover, a:active
+    text-decoration none!important
+  p,h1,h2,h3,h4
+    font-family primaryFont
+
+#wpadminbar
+  position fixed
+
+.hidden_animated
+  opacity 0
+.animated
+  opacity 1 !important
+// Wordpress required classes
+img.alignright { float: right; margin: 0 0 1em 1em; }
+img.alignleft { float: left; margin: 0 1em 1em 0; }
+img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.alignright { float: right; }
+.alignleft { float: left; }
+.aligncenter { display: block; margin-left: auto; margin-right: auto; }
+
+
+
+/* form placeholder overrides - have to use !important or this doesn't work
+--------------------------------------------- */
+::-webkit-input-placeholder { /* Chrome */
+  color: secondaryColor !important;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: secondaryColor !important;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: secondaryColor !important;
+  opacity: 1 !important;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: secondaryColor !important;
+  opacity: 1 !important;
+}
+
+/* global button
+--------------------------------------------- */
+html
+  body
+    .btn
+        margin: 0 1.75vw;
+        border-radius: 2vw;
+        font-size: 1rem;
+        padding: 0.5vw 1.5vw;
+        background: secondaryColor
+        border: secondaryColor

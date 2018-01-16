@@ -1,0 +1,121 @@
+html
+  body
+    header
+      z-index: 1;
+      position fixed
+      width: 100%;
+      .header-bottom
+        transition: all 0.5s ease;
+        width: 82vw;
+        background: #fff;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 1.7vw 2.5vw 1vw;
+        background: rgba(255, 255, 255, 0.85);
+        .header-left
+          transition: all 0.5s ease;
+          width:16vw;
+          .logo-container
+            width: 100%;
+            .logolink
+              width:100%;
+              img
+                width:100%;
+        .header-right
+          min-width: 60vw;
+          .navi
+            width 100%
+            margin: 1.5vw 0;
+            display flex
+            align-items center
+            max-width 60vw
+            .menu-menu-1-container
+              width: 100%;
+              ul
+                display: flex;
+                justify-content space-between
+                margin 0 1vw
+                li
+                  a
+                    font-size: 1rem;
+            .btn
+              margin: 0 1.75vw;
+              border-radius: 2vw;
+              font-size: 1rem;
+              padding: 0.5vw 1.5vw;
+              background: secondaryColor
+              border: secondaryColor
+          .top-info
+            display: flex;
+            justify-content: flex-end;
+            max-width: 58.5vw;
+            transition: all 0.5s ease;
+            p
+              margin: 0;
+              font-size: 1rem;
+              color secondaryColor
+
+            a
+              display: flex;
+              align-items: center;
+              text-decoration: none;
+              .fa-stack
+                width: 1.75rem;
+                height: 1.15rem;
+                line-height: 1.25rem;
+                font-size: 0.65rem;
+                color secondaryColor
+          ul
+            list-style none
+            li
+              display inline-block
+              a
+                text-decoration none
+                color primaryColor
+        button
+          display none
+
+html
+  header.active
+    +above('l')
+      transition .5s
+    .header-bottom
+      padding: 0.5vw;
+      .header-left
+        width:10vw
+        margin: 0.75vw;
+      .header-right
+        .top-info
+          display none
+/* Mobile Menu Button that changes to X */
+
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
